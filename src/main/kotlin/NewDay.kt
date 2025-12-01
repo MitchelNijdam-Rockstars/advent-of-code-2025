@@ -33,5 +33,28 @@ fun main() {
         )
     }
 
+
+    val testDirectory = File("$TEST_PATH/day$dayString")
+
+    // copy files from the template directory dayXX
+    File("$TEST_PATH/dayXX").copyRecursively(testDirectory)
+
+    // rename files, XX should be replaced with day number
+    testDirectory.walkTopDown().forEach { file ->
+        file.renameTo(File(file.path.replace("XX", dayString)))
+    }
+
+    // inside dayXX.kt, replace line 8 with "val day = XX" (and then replace XX with day number)
+    listOf(
+        "$TEST_PATH/day$dayString/Day${dayString}_part1Test.kt",
+        "$TEST_PATH/day$dayString/Day${dayString}_part2Test.kt"
+    ).forEach { kotlinFile ->
+        File(kotlinFile).writeText(
+            File(kotlinFile).readText()
+                .replace("dayXX", "day$dayString")
+                .replace("DayXX", "Day$dayString")
+        )
+    }
+
     println("Done")
 }

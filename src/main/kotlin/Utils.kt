@@ -5,6 +5,7 @@ import kotlin.io.path.readLines
 
 
 const val SRC_PATH = "src/main/kotlin"
+const val TEST_PATH = "src/test/kotlin"
 
 /**
  * Reads lines from the given input txt file.
