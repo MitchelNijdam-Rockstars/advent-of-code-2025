@@ -12,7 +12,7 @@ class DayXX_part1Test {
         )
         val result = solvePuzzlePart1(input)
 
-        assertEquals(1, result)
+        assertEquals(1L, result)
     }
 
 }
