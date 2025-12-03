@@ -22,7 +22,7 @@ class DayXX_part2Test {
         "11,2",
         "32,4"
     )
-    fun test1(input: String, expectedOutput: Long) {
+    fun test2(input: String, expectedOutput: Long) {
         val inputList = listOf(input)
 
         val result = solvePuzzlePart2(inputList)
