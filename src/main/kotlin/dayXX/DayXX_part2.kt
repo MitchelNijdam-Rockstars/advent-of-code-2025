@@ -6,8 +6,8 @@ import readTestInput
 fun main() {
     val day = 0
     val part = 2
-    println("\nExecuting part $part of day $day\n\n")
 
+    println("\nExecuting part $part of day $day\n\n")
 
     val testInput = readTestInput(day)
     val testSolution = solvePuzzlePart2(testInput)
@@ -15,7 +15,7 @@ fun main() {
     printTestOutput(testInput, testSolution)
 
 //    val input = readInput(day)
-//    val solution = solvePuzzle(input)
+//    val solution = solvePuzzlePart2(input)
 //
 //    printOutput(solution)
 }
