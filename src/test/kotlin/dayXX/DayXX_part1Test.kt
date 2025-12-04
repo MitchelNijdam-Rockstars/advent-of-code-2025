@@ -3,9 +3,20 @@ package dayXX
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.CsvSource
+import readTestInput
 import kotlin.test.Test
 
 class DayXX_part1Test {
+
+    @Test
+    fun `from test input`() {
+        val day = 0
+        val testPuzzleInput = readTestInput(day)
+
+        val result = solvePuzzlePart1(testPuzzleInput)
+
+        assertThat(result).isEqualTo(43L)
+    }
 
     @Test
     fun test1() {

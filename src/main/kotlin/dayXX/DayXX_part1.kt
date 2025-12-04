@@ -1,6 +1,8 @@
 package dayXX
 
+import printOutput
 import printTestOutput
+import readInput
 import readTestInput
 
 fun main() {
@@ -9,15 +11,10 @@ fun main() {
 
     println("\nExecuting part $part of day $day\n\n")
 
-    val testInput = readTestInput(day)
-    val testSolution = solvePuzzlePart1(testInput)
+    val input = readInput(day)
+    val solution = solvePuzzlePart1(input)
 
-    printTestOutput(testSolution)
-
-//    val input = readInput(day)
-//    val solution = solvePuzzlePart1(input)
-//
-//    printOutput(solution)
+    printOutput(solution)
 }
 
 

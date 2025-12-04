@@ -53,6 +53,7 @@ fun main() {
             File(kotlinFile).readText()
                 .replace("dayXX", "day$dayString")
                 .replace("DayXX", "Day$dayString")
+                .replace("val day = 0", "val day = $day")
         )
     }
 
