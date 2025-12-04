@@ -12,7 +12,7 @@ fun main() {
     val testInput = readTestInput(day)
     val testSolution = solvePuzzlePart1(testInput)
 
-    printTestOutput(testInput, testSolution)
+    printTestOutput(testSolution)
 
 //    val input = readInput(day)
 //    val solution = solvePuzzlePart1(input)

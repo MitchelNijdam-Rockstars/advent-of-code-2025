@@ -1,9 +1,9 @@
 package dayXX
 
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.CsvSource
 import kotlin.test.Test
-import kotlin.test.assertEquals
 
 class DayXX_part1Test {
 
@@ -14,7 +14,7 @@ class DayXX_part1Test {
         )
         val result = solvePuzzlePart1(input)
 
-        assertEquals(1L, result)
+        assertThat(result).isEqualTo(0L)
     }
 
 
@@ -28,7 +28,7 @@ class DayXX_part1Test {
 
         val result = solvePuzzlePart1(inputList)
 
-        assertEquals(expectedOutput, result)
+        assertThat(result).isEqualTo(expectedOutput)
     }
 
 }

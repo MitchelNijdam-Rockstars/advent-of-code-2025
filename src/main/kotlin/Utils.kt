@@ -30,18 +30,16 @@ fun String.md5() = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteA
  */
 fun Any?.println() = println(this)
 
-fun printTestOutput(testInput: List<String>, solution: Int) {
-    printTestOutput(testInput, solution.toLong())
+fun printTestOutput(solution: Int) {
+    printTestOutput(solution.toLong())
 }
 
-fun printTestOutput(testInput: List<String>, solution: Long) {
+fun printTestOutput(solution: Long) {
     println(
         """
 
 
         --- Test Results ---------------------------------------------------------
-        
-        Input: $testInput
         
         Solution (test)
         $solution
@@ -78,5 +76,11 @@ fun findAllNumbers(input: String): List<Long> {
 fun <T> List<T>.getAllPairs(): List<Pair<T, T>> {
     return this.flatMapIndexed { index, entry ->
         this.drop(index + 1).map { entry to it }
+    }
+}
+
+fun <X, Y> List<X>.cartesianProduct(other: List<Y>): List<Pair<X, Y>> {
+    return this.flatMap { a ->
+        other.map { b -> a to b }
     }
 }

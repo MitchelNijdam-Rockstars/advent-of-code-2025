@@ -4,7 +4,6 @@ import printOutput
 import printTestOutput
 import readInput
 import readTestInput
-import kotlin.math.absoluteValue
 
 fun main() {
     val day = 1
@@ -16,7 +15,7 @@ fun main() {
     val testInput = readTestInput(day)
     val testSolution = solvePuzzlePart1(testInput)
 
-    printTestOutput(testInput, testSolution)
+    printTestOutput(testSolution)
 
     val input = readInput(day)
     val solution = solvePuzzlePart1(input)
