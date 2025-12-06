@@ -1,9 +1,7 @@
 package dayXX
 
 import printOutput
-import printTestOutput
 import readInput
-import readTestInput
 
 fun main() {
     val day = 0
