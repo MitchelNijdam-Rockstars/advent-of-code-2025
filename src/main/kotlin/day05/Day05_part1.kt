@@ -1,9 +1,7 @@
 package day05
 
 import printOutput
-import printTestOutput
 import readInput
-import readTestInput
 
 fun main() {
     val day = 5
@@ -19,5 +17,14 @@ fun main() {
 
 
 fun solvePuzzlePart1(input: List<String>): Long {
-    return input.size.toLong()
+    val freshIngredientRanges = input.takeWhile { it != "" }.map { it.split("-") }
+        .map { it[0].toLong() to it[1].toLong() }
+
+    val ingredientIds = input.takeLastWhile { it != "" }.map { it.toLong() }
+
+    return ingredientIds.count { ingredientId ->
+        freshIngredientRanges.any { range ->
+            ingredientId >= range.first && ingredientId <= range.second
+        }
+    }.toLong()
 }

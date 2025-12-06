@@ -15,7 +15,7 @@ class Day05_part1Test {
 
         val result = solvePuzzlePart1(testPuzzleInput)
 
-        assertThat(result).isEqualTo(43L)
+        assertThat(result).isEqualTo(3L)
     }
 
     @Test
