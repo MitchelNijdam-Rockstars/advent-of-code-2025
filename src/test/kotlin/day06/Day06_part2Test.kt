@@ -16,7 +16,19 @@ class Day06_part2Test {
 
         val result = solvePuzzlePart2(testPuzzleInput)
 
-        assertThat(result).isEqualTo(43L)
+        assertThat(result).isEqualTo(3263827L)
+    }
+
+    @Test
+    fun getSeparatorIndexesTest() {
+        val input = """
+            123 33  45
+            1   1   1
+            12   2  12
+            333 333 123
+        """.trimIndent().split('\n')
+
+        assertThat(getSeparatorIndexes(input)).isEqualTo(listOf(3, 7))
     }
 
     @Test
